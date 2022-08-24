@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    background: black;
+    display: grid;
+    place-content: center;
+}
+
+.input-container{
+    width: 300px;
+}
+
+.input-group{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-group input{
+    padding: 15px 3rem 15px 15px;
+    width: 100%;
+    background: black;
+
+    outline: none;
+    border: 3px solid white;
+    /* border-radius: 2px; */
+
+    color: white;
+    transition: width 0.9s,
+                height 0.9s,
+                border-radius 0.9s;
+    
+}
+
+.input-group input::placeholder{
+    color: #346a80;
+}
+
+.input-group input:focus{
+    /* border: 2px solid #55b7dd; */
+    box-shadow: 0 0 2px 2px #55b7dd34;
+
+    border: 2px solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+}
+
+.input-group .toggle{
+    position: absolute;
+    right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 99;
+}
+
+.input-group .ripple{
+    background: #fff;
+    display: block;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    right: 10px;
+    transition: all 0.5s;
+}
+
+.pass-strength{
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+}
+
+.strength-label{
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 5px;
+    color: #eee;
+    font-size: 15px;
+}
+
+.strength-percent{
+    flex: 1;
+    height: 5px;
+    border-radius: 10px;
+    display: block;
+    background: #eee;
+    margin-top: 5px;
+}
+
+.strength-percent span{
+    display: block;
+    height: 100%;
+    transition: all 0.4s;
+    border-radius: 10px;
+}
+
+.weak{
+    background: red;
+    width: 33%;
+}
+
+.average{
+    background: yellow;
+    width: 66%;
+}
+
+.strong{
+    background: green;
+    width: 100%;
+}
